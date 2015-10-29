@@ -6,8 +6,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-  <div id="container">
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class"navbar-header">
+          <a class="navbar-brand" href="/">Okay Go</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
     <div class="user_nav">
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
@@ -23,7 +40,6 @@
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
     <%= yield %>
-  </div>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
