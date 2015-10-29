@@ -3,9 +3,11 @@
 
 <ul id="each_post">
   <% @posts.each do |post| %>
-    <li><%= post.title %></li>
+    <li><%= post.title %> | <%= post.description %></li>
   <% end %>
 </ul>
 
 
-  <%= link_to "create a new something", new_post_path, :id => "new_post_link", :remote => true %>
+  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %>
+
+  <%= link_to "tag something", new_tag_path, :id => "new_post_link", :remote => true %>
