@@ -16,7 +16,7 @@ class PostsController < ApplicationController
         format.js
       end
     else
-      flash[:notice] = "write something, you goon."
+      flash[:notice] = "write something, friend."
       redirect_to root_path
     end
   end

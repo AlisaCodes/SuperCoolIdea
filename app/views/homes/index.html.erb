@@ -7,7 +7,15 @@
   <% end %>
 </ul>
 
+<ul id="each_tag">
+  <% @tags.each do |tag| %>
+    <li><%= tag.name %> </li>
+  <% end %>
+</ul>
 
-  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %>
+<div id="link_container">
+  <%= link_to "say something", new_post_path, :id => "new_post_link", :remote => true %> |
 
-  <%= link_to "tag something", new_tag_path, :id => "new_post_link", :remote => true %>
+  <%= link_to "tag something", new_tag_path, :id => "new_tag_link", :remote => true %>
+
+</div>
